@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Marcellus', serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #3e3434);
+  color: #fff;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 50px 0;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  max-width: 100px;
+}
+
+header .toggle {
+  width: 30px;
+  height: 30px;
+  background: url(../img/menu.png) no-repeat center/cover;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column; /* Cambiado para apilar imagen y contenido */
+  align-items: center;
+}
+
+.imgBx {
+  width: 100%; /* La imagen principal ocupa todo el ancho disponible */
+  text-align: center;
+}
+
+.imgBx img {
+  max-width: 100%;
+  animation: animacionZapatilla 3.3s linear infinite;
+  
+ 
+}
+
+.contentBx {
+  display: flex; /* Los elementos dentro de .contentBx estarán en una fila */
+  justify-content: space-between; /* El texto se alinea a la izquierda y la imagen a la derecha */
+  align-items: flex-start;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin-top: 20px; /* Separación entre la imagen principal y el contenido */
+margin-right: 20px;
+}
+
+.contentBx .text {
+  flex: 1; /* El texto ocupa la mayor parte del espacio */
+  line-height: 1.8;
+}
+
+.contentBx .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contentBx .text h1 {
+  font-size: 3rem;
+  color: #ff8800;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #ff8800;
+  padding-bottom: 10px;
+}
+
+.contentBx .text p {
+  margin-bottom: 15px;
+}
+
+.contentBx button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #ff8800;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contentBx button:hover {
+  background-color: #ff8800;
+  color: #000;
+  border-radius: 4px;
+}
+
+.bunburyy {
+  max-width: 350%;
+  text-align: right; /* Alinea la imagen a la derecha */
+}
+
+.bunburyy img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-left: 25px;
+}
+
+/* Social Icons */
+.sci {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sci li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.sci a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.sci a:hover {
+  transform: scale(1.4);
+}
+
+ion-icon {
+  vertical-align: middle;
+}
+
+@keyframes animacionZapatilla {
+  0%, 100% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contentBx {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .bunburyy {
+      margin-top: 20px;
+  }
+
+  .sci {
+      bottom: 10px;
+      right: 0;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .sci li {
+      margin: 0 10px;
+  }
+}
+
